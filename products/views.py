@@ -23,7 +23,7 @@ def product_list(request):
         return Response(serializer.errors, status= status.HTTP_400_BAD_REQUEST)
    
 
-@api_view(['GET'])
+@api_view(['GET','PUT'])
 def product_detail(request,pk):
   
     product= get_object_or_404(Product , pk=pk)
